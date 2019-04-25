@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Main</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <div>
+          <ion-card>
+
+          <ion-card-header>
+            <ion-card-title>Chat</ion-card-title>
+          </ion-card-header>
+          <ion-card-content  id="cardChat">
+            <ion-list *ngIf="messages" class="listMessages">
+              <ion-item *ngFor="let item of messages;" class="listMessages">
+                   <p class="listMessages"><b>{{ item.username}} </b> : {{ item.message }} </p>
+              </ion-item>
+            </ion-list>
+
+        </ion-card-content>
+        </ion-card>
+        <ion-card id="cardInput">
+        <ion-card-header>
+          <ion-card-title>Envoyer un message</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+          <!-- Input with placeholder -->
+          <ion-input [(ngModel)]="message" placeholder="Mon message"></ion-input>
+          <div text-right>
+          <ion-button (click)="sendMessage();" color="medium">Envoyer</ion-button>
+        </div>
+      </ion-card-content>
+      </ion-card>
+      </div>
+</ion-content>

@@ -7,8 +7,7 @@
       <div>
           <ion-card>
           <ion-card-header>
-            <ion-card-subtitle>Bienvenue sur mon application</ion-card-subtitle>
-            <ion-card-title>Connexion</ion-card-title>
+            <ion-card-title>S'inscrire</ion-card-title>
           </ion-card-header>
 
           <ion-card-content>
@@ -19,8 +18,8 @@
           <ion-input [(ngModel)]="password" type="password" placeholder="Mot de passe"></ion-input>
 
           <div text-center>
-          <ion-button (click)="login();" color="medium">Se connecter</ion-button>
-          <ion-button [routerLink]="['/signup']" color="medium">S'inscrire</ion-button>
+          <ion-button (click)="register();" color="medium">s'inscrire</ion-button>
+          <ion-button [routerLink]="['/home']" color="medium">retour</ion-button>
         </div>
         </ion-card-content>
         </ion-card>
